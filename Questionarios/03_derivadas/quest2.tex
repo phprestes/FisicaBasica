@@ -1,0 +1,34 @@
+Questionário 2 
+Dada as equações paramétricas que compõe a trajetória dada 
+
+$$x(t) = acos(\omega t)$$
+
+$y(t) = asen(\omega t)$
+
+$z(t)  = bt^{2}$
+
+Derivamos as equações para obtermos as componentes do vetor velocidade $\vec{v}(t)$
+
+$\vec{v}(t)_x  = \frac{dx(t)}{dt} = \dot{x}(t) = -asen(\omega t) \omega$
+
+$\vec{v}(t)_y = \frac{dy(t)}{dt} = \dot{y}(t) = acos(\omega t) \omega$
+
+$\vec{v}(t)_z = \frac{dz(t)}{dt} = \dot{z}(t) = 2bt$
+
+Calculando o módulo a partir da equação:
+
+$|\vec{v}(t)| = \sqrt{\vec{v}(t) \cdot \vec{v}(t)}$
+
+$|\vec{v}(t)| = \sqrt{(\dot{x}(t))^{2} + (\dot{y}(t))^{2} + (\dot{z}(t))^{2}}$
+
+$|\vec{v}(t)| = \sqrt{a^{2}sen^{2}(\omega t) \omega^{2} + a^{2}cos^{2}(\omega t) \omega^{2} + 4b^{2}t^{2}}$
+
+$|\vec{v}(t)| = \sqrt{a^2 \omega^{2} (sen^{2}(\omega t) + cos^{2}(\omega t)) + 4b^{2}t^{2}}$
+
+$|\vec{v}(t)| = \sqrt{a^2 \omega^{2} + 4b^{2}t^{2}}$
+
+Substituindo os valores fornecidos, $a = 4.9, \omega = 9, b = 7.1, t = 1.8$
+
+$|\vec{v}(t)| = \sqrt{(4.9)^{2} \cdot 9^{2} + 4 \cdot (7.1)^{2} \cdot (1.8)^{2}}$
+
+$|\vec{v}(t)| \approx 51.0$

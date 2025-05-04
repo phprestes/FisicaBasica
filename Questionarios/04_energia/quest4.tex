@@ -1,0 +1,26 @@
+Introdução
+
+O problema consiste em calcular a energia mecânica de um mesmo corpo em lançamento oblíquo e no sistema massa-mola sem forças dissipativas, logo a energia mecânica é constante durante o movimento dos sistemas mecânicos informados: \begin{equation} E_m = E_c + E_p. \end{equation}
+Lançamento Oblíquo
+
+Para calcular a energia mecânica do sistema no instante do lançamento ($$t=0$$), é possível assumir que a partícula parte do solo ($z=0$), logo sua energia potencial gravitacional é nula nesse ponto de acordo com a equação: \begin{equation}E_p = - \int \vec{F_g} \cdot d \vec{r} = mgz + C.\end{equation} Com $C$ sendo uma constante arbitrária em que é escolhido $C = 0$ por conveniência. Portanto, a energia mecânica em t = 0 é dado pela forma: \begin{equation}E_m = E_c.\end{equation} Assim, calculando a energia cinética ($E_c$): \begin{equation}E_c = \int \vec{F} \cdot d \vec{r} = \int \dot{\vec{p}} \cdot d \vec{r} =  \frac{mv^{2}}{2}.\end{equation} Obtendo o módulo ao quadrado do vetor velocidade ($\vec{v}$), assumindo que ($\hat{i}, \hat{j}, \hat{k}$) é uma base ortonormal, basta fazer o seguinte produto escalar: \begin{equation}v^{2} = \vec{v} \cdot \vec{v} = \langle 2.6, 4.2, 4.9 \rangle \cdot \langle 2.6, 4.2, 4.9 \rangle \approx 48.41 m/s.\end{equation} Substituindo na equação da energia cinética encontrada anteriormente, com $m = 4.9 kg$: \begin{equation} E_1 = E_m = \frac{4.9 \cdot 48.41}{2} \approx 118.6045000 J. \end{equation}
+Análise Dimensional
+\begin{aligned} \\ [E_p] = [mgz] = M \cdot LT^{-2} \cdot L = ML^{2}T^{-2}. \\ [E_c] = [\frac{mv^{2}}{2}] = ML^{2}T^{-2}. \end{aligned}
+Sistema massa-mola
+
+Para calcular a energia mecânica do sistema massa-mola no instante $t=0$, assume-se que a velocidade inicial é nula e portanto a energia cinética também é nula. Além disso, a mola está completamente deformada e o corpo está na amplitude máxima do movimento oscilatório ($x = A$). Sendo assim: \begin{equation} E_m = E_p. \end{equation} A energia potencial elástica é dada por: \begin{equation} E_p = - \int \vec{F_e} \cdot d \vec{r} = \frac{kx^{2}}{2} + C. \end{equation} Em que $C$ é uma constante arbitrária escolhido como zero por conveniência. Assim substituindo $k = 9.9 Nm^{-1}$ e $x = A = 5.4m$: \begin{equation} E_2 = E_m = \frac{9.9 \cdot (5.4)^{2}}{2} \approx 144.3420000 J. \end{equation}
+Análise Dimensional
+\begin{aligned} \\ [k] = MT^{-2}. \\ [E_p] = [\frac{kx^{2}}{2}] = ML^{2}T^{-2}. \end{aligned}
+Resultado
+
+A partir da análise das energias mecânicas nos dois sistemas, obtêm-se a razão: \begin{equation} E_1/E_2 = 118.6045000 / 144.3420000 \approx 0.821690845. \end{equation}
+Código em Maple
+
+v := <2.6, 4.2, 4.9>
+m := 4.9
+k := 9.9
+A := 5.4
+v_mod := sqrt(v[1]^2 + v[2]^2 + v[3]^2)
+E1 := m*v_mod^2/2
+E2 := k*A^2/2
+E1/E2

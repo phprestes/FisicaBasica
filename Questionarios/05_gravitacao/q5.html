@@ -1,0 +1,47 @@
+<h1>Introdução</h1>
+<p>
+O problema consiste em calcular o período de translação de um planeta de massa desprezível $$m$$ em relação a uma estrela de $$M = 8.7 \cdot 10^{30}kg$$, sabendo que os corpos se encontram a uma distância de $r = 5,4 \cdot 10^{11}m$. Logo, é possível assumir uma órbita circular de raio r com força centrípeta dada por:
+\begin{equation} \vec{F_c} = \frac{mv^{2}}{2} \hat{r} \end{equation}
+E seja a força gravitacional entre os corpos dada por:
+\begin{equation} \vec{F_g} = \frac{GMm}{r^{2}} \hat{r} \end{equation}
+Pela segunda lei de Newton, a força centrípeta deve ser igual à força gravitacional:
+\begin{equation} \vec{F_c} = \vec{F_g} \end{equation}
+</p>
+
+<h1>Velocidade e Velocidade Angular</h1>
+<p>
+Igualando as forças é possível obter a equação do módulo da velocidade:
+\begin{equation} v = \sqrt{\frac{MG}{r}} \end{equation}
+A partir disso é possível usar a relação $v = \omega r$ para descobrir a velocidade angular do movimento de translação:
+\begin{equation} \omega = \frac{\sqrt{\frac{MG}{r}}}{r} = \sqrt{\frac{MG}{r^{3}}} \end{equation}
+</p>
+
+<h1>Período</h1>
+Para o cálculo do período, basta utilizar a equação $T = 2 \pi / \omega$ e substituir o valor da velocidade angular encontrado anteriormente:
+\begin{equation} T = 2 \pi \sqrt{\frac{r^{3}}{MG}} \end{equation}
+Utilizando os valores fornecidos:
+\begin{equation} T = 2 \pi \sqrt{\frac{(5.4 \cdot 10^{11})^{3}}{8.7 \cdot 10^{30} \cdot 6,673 \cdot 10^{-11}}} = 10.348 \cdot 10^{7} \end{equation}
+Portanto, o tempo necessário para que o planeta complete uma volta em torno da estrela é de $10.348 \cdot 10^{7}$.
+
+<h1>Códigos</h1>
+<h4>Python</h4>
+<p>
+import math
+
+# Constantes dadas no problema
+r = 5.4e11  # distância em metros
+M = 8.7e30  # massa da estrela em kg
+G = 6.673e-11  # constante gravitacional em m^3 kg^-1 s^-2
+
+# Cálculo do período de translação
+T = 2 * math.pi * math.sqrt(r**3 / (G * M))
+print(round(T / 1e7, 3))
+</p>
+<h4>Maple</h4>
+<p>
+r := 0.54e12
+M := 0.87e31
+G := 0.6673e-10
+T := 2*Pi*sqrt(r^3/(G*M))
+evalf(T/0.1e8, 5)
+</p>

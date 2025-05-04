@@ -1,0 +1,78 @@
+<p dir="ltr" style="text-align:justify;">Considere uma trajetória representada pela curva espacial descrita parametricamento pelo vetor posição $\vec{r} = x(t)\hat{i} + y(t)\hat{j} + z(t)\hat{k}$, com as seguintes equações horárias:\begin{equation} x(t) = R \cos \theta(t), y(t) = R \sin \theta(t),
+  z(t) = ct, \theta(t) = \omega t. \end{equation} Onde $R, c$ e $\omega$ são parâmetros constantes e $t \in [0, 2 \pi / \omega]$
+</p>
+<br>
+<h1><strong>Primeira Questão</strong></h1>
+<h2>Enunciado (Q1)</h2>
+<p>Calcule o vetor velocidade $\vec{v}$ e o seu módulo.</p>
+<br>
+<h2>Resolução (Q1)</h2>
+<p dir="ltr" style="text-align:justify;">Para calcularmos o vetor velocidade $$\vec{v}$$, basta derivarmos o vetor posição $\vec{r}$ em relação ao tempo: (Substituinto $\theta(t)$ por $\omega t$) \begin{equation} \vec{r} = \left\langle R\cos\left(\omega t\right), R\sin\left(\omega t\right),
+  ct \right\rangle. \end{equation} Aplicando a operação de derivada no vetor $\vec{r}$:\begin{equation} \vec{v} = \dot{\vec{r}} = \left\langle -R \omega \sin\left(\omega t \right), R \omega \cos\left(\omega t \right), c \right\rangle. \end{equation} Assumindo
+  que $\left\langle \hat{i}, \hat{j}, \hat{k} \right\rangle$ representam a base canônica (ortonormal), é possível calcular o módulo do vetor velocidade $\vec{v}$ com o produto escalar.\begin{equation} |\vec{v}| = \sqrt{\vec{v} \cdot \vec{v}} = \sqrt{\dot{x}(t)^{2}
+  + \dot{y}(t)^{2} + \dot{z}(t)^{2}} = \sqrt{\left( -R \omega \sin\left(\omega t\right) \right)^{2} + \left( R \omega \cos\left(\omega t\right) \right)^{2} + c^{2}} = \sqrt{R^{2} \omega^{2} + c^{2}}. \end{equation}
+</p>
+<br>
+<h3>Análise Dimensional (Q1)</h3>
+<p dir="ltr" style="text-align:justify;">
+  \begin{align} \left[\vec{r}\right] &amp;= L, \\ \left[\frac{d \vec{r}}{dt}\right] &amp;= \frac{L}{T} = \left[\vec{v}\right], \\ \left[\sqrt{R^{2} \omega^{2} + c^{2}}\right] &amp;= \sqrt{ \left[R^{2} \omega^{2}\right]} = \sqrt{[c^{2}]} = \frac{L}{T}. \end{align}
+</p>
+<br>
+<h1><strong>Segunda Questão</strong></h1>
+<h2>Enunciado (Q2)</h2>
+<p>Calcule o vetor aceleração $\vec{a}$ e seu módulo.</p>
+<br>
+<h2>Resolução (Q2)</h2>
+<p dir="ltr" style="text-align:justify;">O vetor aceleração pode ser calculado da mesma forma que foi feita na questão anterior, já que o vetor aceleração é a taxa de variação da velocidade e, portanto, pode ser calculado como a derivada da velocidade: \begin{align} \vec{v} &amp;= \left\langle
+  -R \omega \sin\left(\omega t\right), R \omega \cos\left(\omega t \right), c \right\rangle, \\ \vec{a} &amp;= \dot{\vec{v}} = \left\langle -R \omega^{2} \cos\left(\omega t\right), -R \omega^{2} \sin\left(\omega t\right), 0 \right\rangle. \end{align}
+  O processo para calcular o módulo é o mesmo realizado anteriormente:\begin{equation}|\vec{a}| = \sqrt{\vec{a} \cdot \vec{a}} = \sqrt{\left( -R \omega^{2} \cos\left(\omega t\right) \right)^{2} + \left( -R \omega^{2} \sin\left(\omega t\right) \right)^{2}
+  + 0^{2}} = \sqrt{R^{2} \omega^{4}} = \omega^{2} R. \end{equation}
+</p>
+<br>
+<h3>Análise Dimensional (Q2)</h3>
+<p dir="ltr" style="text-align:justify;">
+  \begin{align} [\vec{v}] &amp;= \frac{L}{T}, \\ \left[\frac{d \vec{v}}{dt}\right] &amp;= \frac{L}{T^{2}} = [\vec{a}], \\ \left[\omega^{2} R\right] &amp;= \frac{L}{T^{2}}. \end{align}
+</p>
+<br>
+<h1><strong>Terceira Questão</strong></h1>
+<h2>Enunciado (Q3)</h2>
+<p>Calcule o produto escalar entre os vetores velocidade e aceleração. Calcule também o comprimento desta trajetória e a distância $L$ entre as posição inicial $(t = 0)$ e a posição final $(t = 2 \pi / \omega = T)$ e comente esses dois resultados.</p>
+<br>
+<h2>Resolução (Q3)</h2>
+<p dir="ltr" style="text-align:justify;">O produto escalar entre $\vec{v}$ e $\vec{a}$ pode ser dado por:\begin{equation} \vec{v} \cdot \vec{a} = \dot{x}(t) \cdot \ddot{x}(t) + \dot{y}(t) \cdot \ddot{y}(t) + \dot{z}(t) \cdot \ddot{z}(t). \end{equation} Substituindo os valores de $\vec{v}$ e
+  $\vec{a}$ vistos nas questões anteriores. \begin{equation} \vec{v} \cdot \vec{a} = \left( -R \omega \sin\left(\omega t\right) \right) \cdot \left( -R \omega^{2} \cos\left(\omega t\right) \right) + \left( R \omega \cos\left(\omega t\right) \right) \cdot
+  \left( -R \omega^{2} \sin\left(\omega t\right) \right) + c \cdot 0 = R^{2} \omega^{3} \sin\left(\omega t\right) \cos\left(\omega t\right) - R^{2} \omega^{3} \sin\left(\omega t\right) \cos\left(\omega t\right) = 0. \end{equation} A interpretação geométrica
+  para isso é que os vetores velocidade e aceleração são perpendiculares entre si (já que ambos não são nulos). Já o comprimento de uma dada trajetória $(S)$ entre os instantes $ti$ e $tf$ pode ser calculado como:\begin{equation} S = \int_{ti}^{tf} |
+  \vec{v}(t)| dt. \end{equation} Com $ti = 0$ e $tf = 2 \pi / \omega$ \begin{equation} S = \int_{0}^{\frac{2 \pi}{\omega}} \sqrt{R^{2} \omega^{2} + c^{2}} dt = \sqrt{R^{2} \omega^{2} + c^{2}} \int_{0}^{\frac{2 \pi}{\omega}} dt = \sqrt{R^{2} \omega^{2}
+  + c^{2}} \frac{2 \pi}{\omega}. \end{equation} Para cálculo da distância $(L)$, podemos calcular a equação $\vec{r}(t)$ nos instantes $0$ e $2 \pi / \omega$ e aplicar a equação da distância entre dois pontos. \begin{align} \vec{r}(0) &amp;= \left\langle
+  R\cos\left(\omega \cdot 0\right), R\sin\left(\omega \cdot 0\right), c \cdot 0 \right\rangle = \left\langle R, 0, 0 \right\rangle, \\ \vec{r}\left(\frac{2 \pi}{\omega}\right) &amp;= \left\langle R\cos\left(\omega \frac{2 \pi}{\omega}\right), R\sin\left(\omega
+  \frac{2 \pi}{\omega}\right), c \cdot \frac{2 \pi}{\omega} \right\rangle = \left\langle R, 0, \frac{2 \pi c}{\omega} \right\rangle. \end{align} Aplicando a distância entre dois pontos (módulo da diferença entre estes dois vetores posição): \begin{equation}
+  L = \sqrt{ \left(x_a - x_b \right)^{2} + \left(y_a - y_b \right)^{2} + \left(z_a - z_b \right)^{2}}, \end{equation}\begin{equation} L = \sqrt{\left( R - R \right)^{2} + \left( 0 - 0 \right)^{2} + \left( 0 - \frac{2 \pi c}{\omega} \right)^{2}} = \frac{2
+  \pi c}{\omega}. \end{equation} É possível perceber baseado no comprimento da trajetória $S$ e na distância $L$, que ao "completar uma volta", a distância está no eixo $z$, pois em $x(t)$ e $y(t)$ há uma equação paramétrica da circunferência, logo, é
+  esperado que $S &gt; L$, pois o comprimento varia nos três eixos e percorre toda a circuferência, considerando o caminho total percorrido, enquanto a distância está limitada à variação do eixo $z$.\begin{equation} \sqrt{R^{2} \omega^{2} + c^{2}} \frac{2
+  \pi}{\omega} &gt; \frac{2 \pi c}{\omega}. \end{equation}
+</p>
+<br>
+<h3>Análise Dimensional (Q3)</h3>
+<p dir="ltr" style="text-align:justify;">
+  \begin{align} [S] &amp;= \left[ |\vec{v}| \, dt \right] = \frac{L}{T} \cdot T = L, \\ \left[\sqrt{R^{2} \omega^{2} + c^{2}} \cdot \frac{2 \pi}{\omega}\right] &amp;= \frac{L}{T} \cdot \left[\frac{2 \pi}{\omega}\right] = L, \\ [L] &amp;= L, \\ \left[\frac{2
+  \pi c}{\omega}\right] &amp;= \frac{L T^{-1}}{T^{-1}} = L. \end{align}
+</p>
+<br>
+<h1><strong>Quarta Questão</strong></h1>
+<h2>Enunciado (Q4)</h2>
+<p>Calcule a curvatura.</p>
+<br>
+<h2>Resolução (Q4)</h2>
+<p dir="ltr" style="text-align:justify;">Aplicando a operação de produto vetorial entre os vetores $\vec{v}$ e $\vec{a}$, temos o produto vetorial $\vec{v} \times \vec{a}$, utilizado para calcular a curvatura $\kappa$: \begin{equation}\vec{v} \times \vec{a} = \begin{vmatrix} \hat{i} &amp; \hat{j}
+  &amp; \hat{k} \\ -R \omega \sin(\omega t) &amp; R \omega \cos(\omega t) &amp; c \\ -R \omega^2 \cos(\omega t) &amp; -R \omega^2 \sin(\omega t) &amp; 0 \end{vmatrix}= \left\langle 0 - \left(-R \omega^{2} \sin(\omega t)\right) \cdot c, -R \omega^{2} \cos(\omega
+  t) \cdot c, R^{2} \omega^{3} \sin^{2}(\omega t) - \left(-R^{2} \omega^{3} \cos^{2}(\omega t)\right) \right\rangle = \left\langle R \omega^{2} \sin(\omega t) \cdot c, -R \omega^{2} \cos(\omega t) \cdot c, R^{2} \omega^{3} \right\rangle. \end{equation}
+  Assim, aplicando novamente a equação do módulo:\begin{equation} | \vec{v} \times \vec{a} | = \sqrt{\left(R \omega^{2} \sin \left(\omega t \right) \cdot c\right)^{2} + \left(-R \omega^{2} \cos \left(\omega t \right) \cdot c\right)^{2} + \left(R^{2} \omega^{3}
+  \right)^{2}} = \sqrt{R^{2} \omega^{4} c^{2} + R^{4} \omega^{6}} = R \omega^{2} \sqrt{R^{2} \omega^{2} + c^{2}}. \end{equation} Aplicando na equação da curvatura $\kappa$\begin{equation} \kappa = \frac{|\vec{v} \times \vec{a}|}{v^{3}} = \frac{R \omega^{2}
+  \sqrt{R^{2} \omega^{2} + c^{2}}}{\left(\sqrt{R^{2} \omega^{2} + c^{2}}\right)^{3}} = \frac{R \omega^{2}}{R^{2} \omega^{2} + c^{2}}. \end{equation}
+</p>
+<br>
+<h3>Análise Dimensional (Q4)</h3>
+<p dir="ltr" style="text-align:justify;">\begin{equation} [\kappa] = \left[\frac{|\vec{v} \times \vec{a}|}{v^{3}}\right] = \frac{\frac{L}{T} \times \frac{L}{T^{2}}}{\left(\frac{L}{T}\right)^{3}} = \frac{\frac{L^2}{T^3}}{\frac{L^3}{T^3}} = \frac{1}{L}. \end{equation} É possível perceber que o
+  resultado da curvatura também pode ser escrito como $a/v^{2}$\begin{equation} [\kappa] = \left[\frac{a}{v^{2}}\right] = \frac{\frac{L}{T^{2}}}{\frac{L^{2}}{T^{2}}} = \frac{1}{L}. \end{equation}
+</p>
